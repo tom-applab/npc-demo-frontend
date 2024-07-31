@@ -1,0 +1,44 @@
+.verticals {
+	&.wrapper {
+		width: 100%;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+	}
+
+	.imageWrapper {
+		flex-shrink: 0;
+		width: calc(33% - 15px);
+		margin-top: 20px;
+
+		@media (min-width: $media-breakpoint-md) {
+			margin-top: 0px;
+		}
+
+		@media (min-width: $media-breakpoint-xl) {
+			width: calc(33% - 20px);
+		}
+	}
+
+	.verticalTitle {
+        margin-top: 10px;
+        display: flex;
+        flex-flow: column;
+        h3 {
+            flex-grow: 1;
+            font-size: 24px;
+            line-height: 28px;
+            min-height: 80px;
+        }
+        .ctaLink {
+            margin-top: 40px;
+        }
+		@media (min-width: $media-breakpoint-md) {
+			margin-top: 15px;
+		}
+
+		@media (min-width: $media-breakpoint-xl) {
+			margin-top: 20px;
+		}
+	}
+}

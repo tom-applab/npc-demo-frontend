@@ -1,0 +1,94 @@
+.web-chat {
+  overflow: hidden;
+}
+
+.connect-spinner {
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
+
+.connect-spinner > .content {
+  margin: auto;
+}
+
+.connect-spinner > .content > .icon {
+  font-size: 64px;
+}
+
+.message-card {
+  width: 42%;
+  padding: 20px;
+  border-radius: 20px 20px 20px 5px;
+  font-family: 'Tajawal',sans-serif!important;
+}
+.webchat__text-content , .webchat__send-box-text-box__input, .webchat__activity-status--slotted {
+  font-family: 'Tajawal',sans-serif!important;
+}
+
+.card-container {
+  padding: 10px;
+  margin-bottom: 12px;
+}
+.activity-text-card{
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 20px 20px 20px 0;
+  color: #000;
+  font-size: 16px;
+  padding: 10px 10px 0px 9px;
+  width: 100%;
+}
+
+.message-text-span {
+  margin: 0;
+  line-height: 1.4;
+  white-space: break-spaces;
+}
+
+.light{
+color:#333;
+}
+.message-card-light{
+  background-color: #d8d6d6;
+  }
+  .message-card-dark{
+    background-color:black;
+  }
+.dark{
+color: white;
+}
+
+
+.voice-reply-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.time-ago {
+  color: #777;
+  font-size: 13px;
+}
+.enable-mic-button{
+  inset-inline-end: 79px;
+  position: absolute;
+  bottom: 39px;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  font-size: 15px;
+
+}
+@media (max-width: 768px) {
+  .message-card {
+    width: 100%;
+  }
+}

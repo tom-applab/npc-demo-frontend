@@ -1,0 +1,16 @@
+html[lang='ar'] {
+	direction: rtl;
+
+	a[href*='tel:'],
+	a[href*='mailto:'] {
+		direction: ltr;
+	}
+}
+html[lang='en'] {
+	direction: ltr;
+
+	a[href*='tel:'],
+	a[href*='mailto:'] {
+		direction: ltr;
+	}
+}

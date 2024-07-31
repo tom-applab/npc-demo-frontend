@@ -1,0 +1,24 @@
+$min: 2rem;
+$max: 1240px;
+
+.align-content, #gatsby-focus-wrapper {
+  @include respond-above("sm") {
+    display: grid !important;
+    background-color: $color-white;
+    grid-template-columns: minmax($min, 1fr) minmax($min, $max) minmax($min, 1fr);
+  
+    > * {
+      &:not(.full-bleed, .full-bleed-main) {
+        @include respond-above("sm") {
+          grid-column: 2;
+        }
+      }
+    } 
+  }
+}
+
+[data-theme='dark'] {
+    .align-content, #gatsby-focus-wrapper {
+        background-color: $color-dark-2;
+    }
+}

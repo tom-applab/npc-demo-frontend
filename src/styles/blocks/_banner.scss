@@ -1,0 +1,50 @@
+.banner {
+  inline-size: 100vw;
+  overflow-x: hidden;
+
+  @include respond-above("sm") {
+    padding-block-start: 4rem;
+    padding-block-end: 6rem;
+  }
+
+  @include respond-above("lg") {
+    padding-block-start: 6rem;
+    padding-block-end: 8rem;
+  }
+
+  > div {
+    flex-direction: column-reverse;
+    grid-column: 2 / -1;
+    align-items: center;
+    gap: 2rem;
+
+    @include respond-above("md") {
+      flex-direction: row;
+    }
+
+    .intro-text {
+      min-inline-size: 35ch;
+      max-inline-size: 40rem;
+    }
+
+    .intro-image {
+      padding-inline-end: 0;
+      margin-inline-end: -2rem;
+
+      svg {
+        max-inline-size: 100%;
+      }
+    }
+
+    .cta {
+      padding: 1em 2em;
+      margin-block-start: 2rem;
+    }
+  }
+}
+
+[data-theme='dark'] {
+    .banner {
+        background-color: $color-dark-2;
+    }
+}

@@ -1,0 +1,33 @@
+.flow-section > * + * {
+    margin-block-start: max(4vh, 6rem);
+}
+
+.flow-section {
+    margin-block-start: max(4vh, 6rem);
+
+    @include respond-below(sm) {
+        margin-block-start: max(2vh, 3rem);
+    }
+    
+    @include respond-between(sm, lg) {
+        grid-column: 1/-1 !important;
+    }
+  }
+  
+  .main.flow-section {
+    margin-block-start: 0;
+
+    @include respond-between(sm, lg) {
+        grid-column: 1/-1 !important;
+    }
+  }
+
+html.tap-story {
+    .flow-section > * + * {
+        margin-block-start: 0 !important;
+    }
+  }
+
+ .expertsPage {
+    margin-block-start: 0 !important;
+  }

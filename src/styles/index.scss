@@ -1,0 +1,55 @@
+@import "reset";
+@import 'base';
+@import 'selectlist';
+@import 'typography';
+
+@import './variables';
+@import './mixins';
+/* ==================================================
+  Composition
+  ================================================== */
+
+@import "composition/align-content";
+@import "composition/container";
+@import "composition/flow-content";
+@import "composition/flow-section";
+@import "composition/full-width";
+@import "composition/split";
+
+/* ==================================================
+   Blocks
+   ================================================== */
+@import "blocks/banner";
+
+.ecss-single {
+    .main {
+        margin-block-start: 0rem !important;
+    }
+}
+
+.page-home {
+    .main {
+        margin-block-start: 0rem !important;
+        margin-block-end: 0rem !important;
+    
+        @include respond-below("sm") {
+            margin-block-start: 0rem !important;
+        }
+
+        @include respond-between(sm, lg) {
+            grid-column: 1/-1 !important;
+        }
+
+        h1 {
+            display: none !important;
+        }
+    }
+}
+
+footer {
+  margin-block-start: 4rem;
+
+  @include respond-above("md") {
+    margin-block-start: 6rem;
+  }
+}

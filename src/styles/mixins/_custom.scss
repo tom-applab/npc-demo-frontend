@@ -1,0 +1,95 @@
+
+@mixin module-margin-small($important: false) {
+	@if $important == true {
+		margin-top: 25px !important;
+		@media (min-width: $media-breakpoint-md) {
+			margin-top: 35px !important;
+		}
+		@media (min-width: $media-breakpoint-xxl) {
+			margin-top: 35px !important;
+		}
+	} @else {
+		margin-top: 25px;
+		@media (min-width: $media-breakpoint-md) {
+			margin-top: 35px;
+		}
+		@media (min-width: $media-breakpoint-xxl) {
+			margin-top: 35px;
+		}
+	}
+}
+
+@mixin module-margin-large($important: false) {
+	@if $important == true {
+		margin-bottom: 60px !important;
+		@media (min-width: $media-breakpoint-md) {
+			margin-bottom: 120px !important;
+		}
+		@media (min-width: $media-breakpoint-xxl) {
+			margin-bottom: 120px !important;
+		}
+	} @else {
+		margin-bottom: 60px;
+		@media (min-width: $media-breakpoint-md) {
+			margin-bottom: 120px;
+		}
+		@media (min-width: $media-breakpoint-xxl) {
+			margin-bottom: 120px;
+		}
+	}
+}
+
+@mixin fullWidthBorder() {
+	&:before {
+		content: '';
+		border-top: 1px solid $color-grey-3;
+		display: block;
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+	}
+}
+
+@mixin breakWord() {
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+
+	-ms-word-break: break-all;
+	/* This is the dangerous one in WebKit, as it breaks things wherever */
+	word-break: break-word;
+	/* Instead use this non-standard one:
+	word-break: break-word;
+	*/
+
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+// Temporarily disable popup link (+) for about page
+div[id='3a614798-b8b3-5ca4-b9d0-8cc18397cf84'],
+div[id='ded6a58e-4e18-5038-832a-afdd437cc42b'] {
+	.ModulePinpointList-module--listItem--2o_El {
+		pointer-events: none;
+		cursor: default;
+		text-decoration: none;
+
+		.ModulePinpointList-module--toggleIcon--2v8cb {
+			display: none !important;
+		}
+	}
+}
+#gatsby-plugin-page-progress {
+	z-index: 3 !important;
+}
+html.tap-story {
+	#gatsby-plugin-page-progress {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
